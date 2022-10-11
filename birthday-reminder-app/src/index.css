@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  --clr-active: hsl(162, 73%, 46%);
+
+  --clr-grey-9: hsl(209, 61%, 16%);
+  --clr-white: #fff;
+  --clr-panelColor: #ffe66d;
+  --clr-black: #222;
+  --clr-pink: #f28ab2;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--clr-pink);
+  line-height: 1.5;
+  color: var(--clr-grey-9);
+}
+
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+  color: var(--clr-grey-9);
+}
+
+.App {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  min-width: 30rem;
+  /* overflow-x: hidden; */
+  position: relative;
+}
+
+.addPerson {
+  position: absolute;
+  right: 5em;
+  top: 7em;
+}
+
+.addPerson button {
+  border: 0;
+  background-color: var(--clr-panelColor);
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.7em;
+  border-radius: 10px;
+}
+
+.addPerson button:hover {
+  background-color: var(--clr-active);
+  cursor: pointer;
+}
+
+.cancel {
+  position: absolute;
+  right: 5em;
+  top: 7em;
+}
+
+.cancel button {
+  border: 0;
+  background-color: var(--clr-panelColor);
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.7em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .App {
+    min-width: 10em;
+    overflow-x: hidden;
+  }
+}
+
+/* .wrap {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  min-width: 30rem;
+} */
+
+.login {
+  border: 2px solid #dddddd;
+  min-height: 150px;
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 5px;
+}
+
+.login form .inp {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.login form input {
+  border: 0;
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 1rem;
+}
+
+.login form button {
+  border: 0;
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 1rem;
+  margin: 10px 0;
+  width: 100%;
+  /* display: block; */
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.login form button:hover {
+  background-color: var(--clr-active);
+}
+
+.login span {
+  color: white;
+}
+
+.logout {
+  position: absolute;
+  left: 5em;
+  bottom: 5em;
+}
+
+.logout button {
+  border: 0;
+  background-color: var(--clr-panelColor);
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.7em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.birthdayIcon {
+  position: absolute;
+  left: 5em;
+  top: 4em;
+}
+
+.birthdayIcon .cake {
+  font-size: 2.5rem;
+}
+
+.formData {
+  border: 2px solid #dddddd;
+  min-height: 150px;
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 5px;
+}
+
+.formData .inpfile {
+  margin-bottom: 1em;
+}
+
+.formData input {
+  border: 0;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.formData input:focus {
+  outline: 2px solid var(--clr-active);
+}
+
+.formData .submitBtn {
+  font-size: 1em;
+  padding: 0.6em;
+  background: var(--clr-active);
+  border: 0;
+  width: 7em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.formData .submitBtn:disabled {
+  cursor: not-allowed;
+}
+
+.formData .btn {
+  text-align: end;
+}
+
+.btn button {
+  padding: 2px;
+}
+
+.inpfile {
+  display: flex;
+  flex-direction: column;
+}
+
+.board {
+  margin-top: 2em;
+}
+
+ul {
+  list-style: none;
+}
+
+ul > li .grid {
+  color: var(--clr-black);
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8em;
+  align-items: center;
+  margin-top: 1em;
+  background-color: var(--clr-active);
+  padding: 0.8em 2em;
+  border-radius: 10px;
+  box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+ul > li .grid img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  text-align: center;
+}
+
+.tag {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.icons {
+  color: red;
+  cursor: pointer;
+}
